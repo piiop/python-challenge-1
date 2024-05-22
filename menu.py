@@ -136,7 +136,7 @@ while place_order:
                     # Check if the quantity is a number, default to 1 if not
                     if quantity.isdigit():
                         quantity = int(quantity)
-                    # Tell the customer that their input isn't valid
+                    
                     else:
                         quantity = 1
                         print(f"That input is invalid... quantity set to 1. ")
@@ -148,12 +148,15 @@ while place_order:
                                 }
                     customer_order.append(order_item)
                     print(f"{item_name} has been added to your order.")
-                # Tell the customer they didn't select a menu option
+                # Tell the customer that their input isn't valid
                 else:
-                    print("Please select a menu option.")
-            else:
+                    print("That is not a valid input.")
             # Tell the customer they didn't select a menu option
-                print(f"That is not a menu option.")
+            else:
+                print("That is not a menu option.")
+        else:
+            # Tell the customer they didn't select a menu option
+            print(f"That is not a menu option.")
     else:
         # Tell the customer they didn't select a number
         print("You didn't select a number.")
@@ -214,10 +217,10 @@ for item in customer_order:
 
 # 11. Calculate the cost of the order using list comprehension
 
-total_price = sum([item["Price"] * item["Quantity"] for item in customer_order])
+total_price = float(sum([item["Price"] * item["Quantity"] for item in customer_order]))
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 #num_totals_spaces = 25 - len(str(total_price))
 total_spacing = " " * 20
-print(f"\n{total_spacing}Total : ${total_price}")
+print(f"\n{total_spacing}Total : ${total_price:.2f}")
 
