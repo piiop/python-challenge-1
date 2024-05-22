@@ -218,9 +218,10 @@ for item in customer_order:
 # 11. Calculate the cost of the order using list comprehension
 
 total_price = float(sum([item["Price"] * item["Quantity"] for item in customer_order]))
+
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
-#num_totals_spaces = 25 - len(str(total_price))
+
 total_spacing = " " * 20
 print(f"\n{total_spacing}Total : ${total_price:.2f}")
 
