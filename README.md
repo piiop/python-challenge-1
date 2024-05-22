@@ -13,18 +13,18 @@
 1. Create an empty list. This list will later store a customer's order in dictionary format, 
 as follows:
 
->[
->  {
->    "Item name": "string",
->    "Price": float,
->    "Quantity": int
->  },
->  {
->    "Item name": "string",
->    "Price": float,
->    "Quantity": int
->  },
->]
+#
+># {
+>#    "Item name": "string",
+>#    "Price": float,
+>#    "Quantity": int
+>#  },
+>#  {
+>#    "Item name": "string",
+>#    "Price": float,
+>#    "Quantity": int
+>#  },
+#
 
 2. After the sub-menu is printed, prompt the customer to enter their selection from the 
 menu, saving it as a variable menu_selection.
